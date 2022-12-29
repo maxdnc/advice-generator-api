@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: hsl(218deg, 23%, 16%);
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(217deg, 19%, 24%);
+  margin: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  position: relative;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  text-align: center;
+  font-size: 0.7rem;
+  padding-block: 1rem;
+  color: hsl(150deg, 100%, 66%);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+p {
+  text-align: center;
+  color: hsl(193deg, 38%, 86%);
+  padding: 0 0.5rem 0rem 0.5rem;
+  max-width: 30ch;
+}
+
+.divider-img {
+  padding-block: 2rem;
+}
+
+.button-style {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: hsl(150deg, 100%, 66%);
+  height: 3rem;
+  width: 3rem;
+  border-radius: 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translatex(-50%) translatey(50%);
+  cursor: pointer;
+}
+.button-style:hover {
+  box-shadow: 0px 0px 1rem hsl(150deg, 100%, 66%);
+}
+.button-style:hover .dice {
+  transform: rotate(360deg);
+}
+.button-style:active .dice {
+  transform: scale(0.8);
+}
+
+.dice {
+  transition: 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 40rem) {
+  p {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */

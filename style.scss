@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+// font & colors //
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+//Primary
+
+$Light-Cyan: hsl(193, 38%, 86%);
+$Neon-Green: hsl(150, 100%, 66%);
+
+//Neutral
+
+$Grayish-Blue: hsl(217, 19%, 38%);
+$Dark-Grayish-Blue: hsl(217, 19%, 24%);
+$Dark-Blue: hsl(218, 23%, 16%);
+
+// mobile design //
+
+body {
+  background-color: $Dark-Blue;
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $Dark-Grayish-Blue;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  position: relative;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+}
+h1 {
+  text-align: center;
+  font-size: 0.7rem;
+  padding-block: 1rem;
+  color: $Neon-Green;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+p {
+  text-align: center;
+  color: $Light-Cyan;
+  padding: 0 0.5rem 0rem 0.5rem;
+  max-width: 30ch;
+}
+
+.divider-img {
+  padding-block: 2rem;
+}
+
+.button-style {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: $Neon-Green;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translatex(-50%) translatey(50%);
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 0px 1rem $Neon-Green;
+    .dice {
+      transform: rotate(360deg);
+    }
+  }
+  &:active {
+    .dice {
+      transform: scale(0.8);
+    }
+  }
+}
+
+.dice {
+  transition: 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 40rem) {
+  p {
+    font-size: 1.5rem;
+  }
+}
