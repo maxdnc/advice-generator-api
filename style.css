@@ -99,7 +99,6 @@ p {
   justify-content: center;
   align-items: center;
   border: none;
-  outline: none;
   background-color: hsl(150deg, 100%, 66%);
   height: 3rem;
   width: 3rem;
